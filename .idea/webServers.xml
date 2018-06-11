@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="578e4e72-e6fe-43c4-ac9f-9c3ec87e3d6d" name="Local" url="http://localhost">
+        <fileTransfer host="localhost" port="12346">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="12346" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="cd46d832-ac48-43ef-ba14-7bd3044a05c8" name="Localhost">
+        <fileTransfer port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

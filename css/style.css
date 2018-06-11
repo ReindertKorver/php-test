@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+}
+
+.MainBody {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: darkcyan;
+    padding: 0px;
+    margin: 0px;
+}
+.Page{
+
+}
+.PageTitle {
+    padding: 0px;
+    margin: 0px;
+    color:white;
+    font-size: 40px;
+
+}
