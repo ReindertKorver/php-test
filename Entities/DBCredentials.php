@@ -6,7 +6,7 @@
  * Time: 21:37
  */
 
-namespace RKPHP;
+namespace Entities;
 
 
  class DBCredentials

@@ -1,0 +1,18 @@
+{
+  "name": "reind/php_test",
+  "description": "phptest",
+  "authors": [
+    {
+      "name": "Reindert Korver",
+      "email": "reindertkorver@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "DAL\\": "DAL/",
+      "BLL\\": "BLL/",
+      "Entities\\": "Entities/"
+    }
+  }
+}

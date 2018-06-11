@@ -4,8 +4,8 @@
  * Date: 11-6-2018
  * Time: 16:59
  */
-use \RKPHP\DBDefaultConnection;
-require_once \RKPHP\DBDefaultConnection;
+require  __DIR__.'/vendor/autoload.php';
+use \DAL\DBDefaultConnection;
 
 if (DBDefaultConnection::TestConnection()) {
 //connection accomplished
@@ -15,10 +15,10 @@ if (DBDefaultConnection::TestConnection()) {
         $page = "home";
     }
 } else {
-    $ErrorConnectionMessage = \RKPHP\DBDefaultConnection::TestConnection();
+    $ErrorConnectionMessage = DBDefaultConnection::TestConnection();
 
 }
-
+$rootDir=__DIR__;
 ?>
 <html>
 <head>
@@ -52,14 +52,12 @@ if (DBDefaultConnection::TestConnection()) {
             } elseif (!isset($page)) {
                 include("home.php");
             } else {
-                header("Location: ?page=404");
-                exit;
+                include "404.php";
             }
         } else if (isset($ErrorConnectionMessage)) {
             echo "Fout bij verbinding maken met database ".$ErrorConnectionMessage;
         } else {
-            header("Location: ?page=404");
-            exit;
+            include "404.php";
         }
 
         ?>

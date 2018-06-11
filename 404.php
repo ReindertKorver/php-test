@@ -4,4 +4,4 @@
  * Date: 11-6-2018
  * Time: 17:37
  */
-echo "Page not found";
+echo "<h1 class='PageTitle''>Pagina niet gevonden</h1>>";
