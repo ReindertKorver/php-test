@@ -3,7 +3,7 @@ $basecolor1:#FF5729;
 $basecolor2:#454445;
 $basecolor3:#F5F2DC;
 $basecolor4:#009494;
-
+$PageheightWithoutNAV:calc(100% - 56px);
 
 body {
   margin: 0px;
@@ -12,10 +12,11 @@ body {
 .MainBody {
   position: relative;
   width: 100%;
-  height: calc(100% - 20px);
+  height: $PageheightWithoutNAV;
   background: $basecolor;
   padding: 0px;
   margin: 0px;
+  overflow: hidden;
 }
 #backgroundAnimation{
   position: fixed;
@@ -34,7 +35,9 @@ body {
 .Page {
 
 }
-
+.PageContent{
+  height: $PageheightWithoutNAV;
+}
 .PageTitle {
   padding: 0px;
   color: white;
@@ -62,6 +65,7 @@ body {
   background: white;
   border: 2px solid $basecolor;
   color: $basecolor;
+  cursor: pointer;
 }
 
 .DefaultButton:active {
@@ -94,14 +98,14 @@ body {
   background: white;
   border: 2px solid $basecolor;
 }
-#LoginForm {
+.Form50center {
   margin: 0 auto;
   width: 50%;
 }
 .TopBar{
   position: relative;
   height: 20px;
-  background: $basecolor2;
+  background: white;
   opacity: 0.5;
   width: 100%;
   top: 0px;
@@ -123,4 +127,19 @@ body {
 
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: white;
+}
+.Message{
+  height: auto;
+  width: 100%;
+  background: white;
+  margin: 2px;
+  border: 2px solid #00585E;
+  border-radius: 3px;
+  padding: 2px;
+}
+.Message hr{
+  margin: 0;
+}
+.MessageTitle{
+  font-weight: bold;
 }

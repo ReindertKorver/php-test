@@ -4,10 +4,11 @@ body {
 .MainBody {
   position: relative;
   width: 100%;
-  height: calc(100% - 20px);
+  height: calc(100% - 56px);
   background: #00585E;
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+  overflow: hidden; }
 
 #backgroundAnimation {
   position: fixed;
@@ -22,6 +23,9 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%; }
+
+.PageContent {
+  height: calc(100% - 56px); }
 
 .PageTitle {
   padding: 0px;
@@ -47,7 +51,8 @@ body {
 .DefaultButton:hover {
   background: white;
   border: 2px solid #00585E;
-  color: #00585E; }
+  color: #00585E;
+  cursor: pointer; }
 
 .DefaultButton:active {
   background: #00585E;
@@ -78,14 +83,14 @@ body {
   background: white;
   border: 2px solid #00585E; }
 
-#LoginForm {
+.Form50center {
   margin: 0 auto;
   width: 50%; }
 
 .TopBar {
   position: relative;
   height: 20px;
-  background: #454445;
+  background: white;
   opacity: 0.5;
   width: 100%;
   top: 0px;
@@ -108,5 +113,20 @@ body {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: white; }
+
+.Message {
+  height: auto;
+  width: 100%;
+  background: white;
+  margin: 2px;
+  border: 2px solid #00585E;
+  border-radius: 3px;
+  padding: 2px; }
+
+.Message hr {
+  margin: 0; }
+
+.MessageTitle {
+  font-weight: bold; }
 
 /*# sourceMappingURL=SCSS.css.map */
