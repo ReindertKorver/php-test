@@ -1,0 +1,126 @@
+$basecolor:#00585E;
+$basecolor1:#FF5729;
+$basecolor2:#454445;
+$basecolor3:#F5F2DC;
+$basecolor4:#009494;
+
+
+body {
+  margin: 0px;
+}
+
+.MainBody {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 20px);
+  background: $basecolor;
+  padding: 0px;
+  margin: 0px;
+}
+#backgroundAnimation{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+#BackVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.Page {
+
+}
+
+.PageTitle {
+  padding: 0px;
+  color: white;
+  font-size: 40px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.DefaultButton {
+  background: white;
+  color:$basecolor;
+  border: 2px solid $basecolor;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  height: auto;
+  width: 100%;
+  margin: 2px;
+  outline: 0;
+}
+
+.DefaultButton:hover {
+  background: white;
+  border: 2px solid $basecolor;
+  color: $basecolor;
+}
+
+.DefaultButton:active {
+  background: #00585E;
+  color: white;
+  border: 2px solid white;
+}
+
+.DefaultTextBox {
+  background: white;
+  color: $basecolor;
+  border: 2px solid $basecolor;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  height: auto;
+  width: 100%;
+  margin: 2px;
+  outline: 0;
+}
+.DefaultTextBox:hover{
+  background: white;
+  border: 2px solid $basecolor;
+  color: $basecolor;
+}
+.DefaultTextBox:focus {
+  color: $basecolor;
+  background: white;
+  border: 2px solid $basecolor;
+}
+#LoginForm {
+  margin: 0 auto;
+  width: 50%;
+}
+.TopBar{
+  position: relative;
+  height: 20px;
+  background: $basecolor2;
+  opacity: 0.5;
+  width: 100%;
+  top: 0px;
+  color: $basecolor3;
+  transition: 1s;
+}
+.TopBar:hover{
+  transition: 1s;
+  opacity: 0.9;
+}
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}

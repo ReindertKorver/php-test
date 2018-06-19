@@ -1,0 +1,112 @@
+body {
+  margin: 0px; }
+
+.MainBody {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 20px);
+  background: #00585E;
+  padding: 0px;
+  margin: 0px; }
+
+#backgroundAnimation {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%; }
+
+#BackVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%; }
+
+.PageTitle {
+  padding: 0px;
+  color: white;
+  font-size: 40px;
+  margin: 0 auto;
+  width: fit-content; }
+
+.DefaultButton {
+  background: white;
+  color: #00585E;
+  border: 2px solid #00585E;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  height: auto;
+  width: 100%;
+  margin: 2px;
+  outline: 0; }
+
+.DefaultButton:hover {
+  background: white;
+  border: 2px solid #00585E;
+  color: #00585E; }
+
+.DefaultButton:active {
+  background: #00585E;
+  color: white;
+  border: 2px solid white; }
+
+.DefaultTextBox {
+  background: white;
+  color: #00585E;
+  border: 2px solid #00585E;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  height: auto;
+  width: 100%;
+  margin: 2px;
+  outline: 0; }
+
+.DefaultTextBox:hover {
+  background: white;
+  border: 2px solid #00585E;
+  color: #00585E; }
+
+.DefaultTextBox:focus {
+  color: #00585E;
+  background: white;
+  border: 2px solid #00585E; }
+
+#LoginForm {
+  margin: 0 auto;
+  width: 50%; }
+
+.TopBar {
+  position: relative;
+  height: 20px;
+  background: #454445;
+  opacity: 0.5;
+  width: 100%;
+  top: 0px;
+  color: #F5F2DC;
+  transition: 1s; }
+
+.TopBar:hover {
+  transition: 1s;
+  opacity: 0.9; }
+
+::placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */ }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white; }
+
+/*# sourceMappingURL=SCSS.css.map */
