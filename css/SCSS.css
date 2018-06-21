@@ -1,6 +1,9 @@
 body {
   margin: 0px; }
 
+b {
+  color: white; }
+
 .MainBody {
   position: relative;
   width: 100%;
@@ -25,7 +28,9 @@ body {
   min-height: 100%; }
 
 .PageContent {
-  height: calc(100% - 56px); }
+  height: calc(100% - 56px);
+  overflow-y: auto;
+  overflow-x: hidden; }
 
 .PageTitle {
   padding: 0px;
@@ -37,7 +42,7 @@ body {
 .DefaultButton {
   background: white;
   color: #00585E;
-  border: 2px solid #00585E;
+  border: 2px solid #454445;
   border-radius: 3px;
   padding-left: 15px;
   padding-top: 5px;
@@ -50,7 +55,7 @@ body {
 
 .DefaultButton:hover {
   background: white;
-  border: 2px solid #00585E;
+  border: 2px solid #454445;
   color: #00585E;
   cursor: pointer; }
 
@@ -62,7 +67,7 @@ body {
 .DefaultTextBox {
   background: white;
   color: #00585E;
-  border: 2px solid #00585E;
+  border: 2px solid #454445;
   border-radius: 3px;
   padding-left: 15px;
   padding-top: 5px;
@@ -75,13 +80,13 @@ body {
 
 .DefaultTextBox:hover {
   background: white;
-  border: 2px solid #00585E;
+  border: 2px solid #454445;
   color: #00585E; }
 
 .DefaultTextBox:focus {
   color: #00585E;
   background: white;
-  border: 2px solid #00585E; }
+  border: 2px solid #454445; }
 
 .Form50center {
   margin: 0 auto;
@@ -118,15 +123,36 @@ body {
   height: auto;
   width: 100%;
   background: white;
-  margin: 2px;
-  border: 2px solid #00585E;
+  border: 2px solid #454445;
   border-radius: 3px;
-  padding: 2px; }
+  padding: 2px;
+  margin: 2px auto; }
 
 .Message hr {
   margin: 0; }
 
 .MessageTitle {
   font-weight: bold; }
+
+.AdminPageNavItem {
+  border: none;
+  background: none;
+  width: 100%;
+  outline: 0;
+  color: white;
+  cursor: pointer; }
+
+.AdminPageNavItem:hover {
+  font-weight: bold; }
+
+.AdminPageContent {
+  display: none;
+  padding-right: 15px; }
+
+.AdminPageContent .active {
+  display: block; }
+
+.active {
+  display: block; }
 
 /*# sourceMappingURL=SCSS.css.map */

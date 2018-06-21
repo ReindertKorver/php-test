@@ -21,7 +21,7 @@ class DBUserConnection
         $conn = new mysqli(DBCredentials::$ServerName, DBCredentials::$UserName, DBCredentials::$Password, DBCredentials::$DatabaseName);
 
         if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
+            return "Fout bij verbinding met database";
         }
         $stmt = $conn->prepare("SELECT ID, UserName, Password FROM user where UserName=? and Password=?");
         $stmt->bind_param("ss", $UserName, $Password);

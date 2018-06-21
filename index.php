@@ -15,11 +15,22 @@ if (session_status() == PHP_SESSION_NONE) {
 if (DBDefaultConnection::TestConnection()) {
 //connection accomplished
     if (isset($_GET["page"])) {
-        if(strtolower($_GET["page"]) !="index")
-        {
-            $page = $_GET["page"];
-        }
-        else{
+        if (strtolower($_GET["page"]) != "index") {
+
+            $controlpage = strtolower($_GET["page"]);
+            if ($controlpage != "404" && $controlpage != "home" && $controlpage != "account" && $controlpage != "login" &&$controlpage!="admin") {
+                $pageResult = \DAL\DBPageConnection::GetPage($controlpage);
+                if (!is_string($pageResult)) {
+                    $DatabasePage = $pageResult;
+                } else {
+                    $DatabasePage = false;
+                }
+
+
+            } else {
+                $page = $_GET["page"];
+            }
+        } else {
             $page = "home";
         }
 
@@ -48,6 +59,7 @@ if (isset($_SESSION["LoggedInUser"])) {
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/SCSS.css"/>
     <link rel="stylesheet" href="css/animation.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
           integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -105,18 +117,32 @@ if (isset($_SESSION["LoggedInUser"])) {
 <div class="MainBody">
     <div class="Page">
         <?php
-        if (file_exists($page . ".php") && !isset($ErrorConnectionMessage)) {
+        if (!isset($ErrorConnectionMessage)) {
+
             if (isset($page) && $page != "") {
+
+                if (file_exists($page . ".php")) {
+
+                } else {
+                    include "404.php";
+                }
                 include("" . $page . ".php");
             } elseif (!isset($page)) {
-                include("home.php");
+                if (!is_bool($DatabasePage) && is_object($DatabasePage)) {
+                    echo $DatabasePage->Element->Data;
+                }
+                elseif (is_null($DatabasePage)){
+                    include "404.php";
+                }
+                else {
+                    include("home.php");
+                }
+
             } else {
                 include "404.php";
             }
-        } else if (isset($ErrorConnectionMessage)) {
-            echo "Fout bij verbinding maken met database " . $ErrorConnectionMessage;
         } else {
-            include "404.php";
+            echo "Fout bij verbinding maken met database " . $ErrorConnectionMessage;
         }
 
         ?>
